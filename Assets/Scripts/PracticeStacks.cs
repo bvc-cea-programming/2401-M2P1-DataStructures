@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PracticeStacks : MonoBehaviour
 {
+    private Stack<GameObject> collectedStack = new Stack<GameObject>();
+
     private void Start()
     {
         
@@ -19,11 +21,16 @@ public class PracticeStacks : MonoBehaviour
 
     public void CollectObjects(GameObject obj)
     {
-        
+        collectedStack.Push(obj);
+        obj.SetActive(false);
     }
     
-    private void GenerateObject()
+    private void GenerateObject() //just to show from the last object right?
     {
-        
+        if (collectedStack.Count > 0)
+        {
+            GameObject lastCollectedObject = collectedStack.Pop(); 
+            lastCollectedObject.SetActive(true);
+        }
     }
 }
