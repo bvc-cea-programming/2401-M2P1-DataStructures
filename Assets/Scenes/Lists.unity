@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725f8bdca34d67240b091727770791a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLocationObject: {fileID: 1699580674}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Key Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 18eb48c6412d6a94e817203ee3c2ad52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
