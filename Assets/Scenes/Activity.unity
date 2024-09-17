@@ -189,6 +189,7 @@ MonoBehaviour:
   interactionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  gridManager: {fileID: 249632489}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
