@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
+
 
 public class GridManager : MonoBehaviour
 {
@@ -21,7 +23,20 @@ public class GridManager : MonoBehaviour
 
     private void GenerateGrid()
     {
-        
+        _grid = new GridObject[gridSize, gridSize];
+
+        for(int x=0; x<gridSize;x++)
+        {
+            for(int y=0;y<gridSize; y++)
+            {
+
+                GameObject obj = Instantiate(baseGridPrefab);
+                Instantiate(baseGridPrefab,new Vector3(x + gridOffset.x, 0 ,y+gridOffset.y),Quaternion.identity);
+
+                _grid[x,y] = obj.GetComponent<GridObject>(); 
+
+            }
+        }
     }
 
     public GridObject GetGridObject(int x, int y)
@@ -36,6 +51,14 @@ public class GridManager : MonoBehaviour
 
     public void SetGridObject(int x, int y)
     {
-        
+        if (x < 0 || y < 0 || x >= gridSize || y >= gridSize) return;
+
+        Destroy(_grid[x, y].gameObject);
+
+        var RandomObj = defenseObjects[Random.Range(0, defenseObjects.Count)].objectprefab;
+         
+
+        GameObject obj = Instantiate(RandomObj, new Vector3(x + gridOffset.x, 0, y + gridOffset.y), Quaternion.identity);
+        _grid[x, y] = obj.GetComponent<GridObject>();
     }
 }

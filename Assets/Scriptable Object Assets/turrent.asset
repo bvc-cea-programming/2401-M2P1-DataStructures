@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415d6d59aac52ad44a55c28fa7d2e2a5, type: 3}
+  m_Name: turrent
+  m_EditorClassIdentifier: 
+  objectname: turrent
+  description: shoots multiple bullets ,low damage
+  objectprefab: {fileID: 2396520223018681640, guid: 1182ca2fa6c86114980bd1fb330dc178,
+    type: 3}
+  objectIcon: {fileID: 0}
+  Price: 0
