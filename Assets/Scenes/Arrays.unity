@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &206615982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641521888591489035, guid: 97c962e88eb3a214b90ada57ade9e175,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504854779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &249632487
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc4f3a88bf30614d9d4def41f74ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPerfabs:
+  - {fileID: 641521888591489035, guid: 97c962e88eb3a214b90ada57ade9e175, type: 3}
+  - {fileID: 7189488435442882314, guid: 89b3295f78807444b82c525cc1d03ccb, type: 3}
+  - {fileID: 8275260647229087207, guid: dc8ed17d1c193f64d946480459f64031, type: 3}
+  - {fileID: 2554660004420269584, guid: 3c67de5d7b0302b4e9e089bc99fc55ed, type: 3}
+  originalPerfabs: {fileID: 206615982}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Skeleton_Mage
+      objectReference: {fileID: 0}
+    - target: {fileID: 641521888591489035, guid: 97c962e88eb3a214b90ada57ade9e175,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
