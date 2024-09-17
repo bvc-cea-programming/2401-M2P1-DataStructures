@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415d6d59aac52ad44a55c28fa7d2e2a5, type: 3}
+  m_Name: Turret
+  m_EditorClassIdentifier: 
+  objectName: Turret
+  description: 'shoots bullets faster but with little damage '
+  objectPrefab: {fileID: 8218246494736206215, guid: 47ef6663727b1a14aacf0cce27b931f4,
+    type: 3}
+  objecticon: {fileID: 0}
+  price: 0

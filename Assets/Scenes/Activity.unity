@@ -171,7 +171,9 @@ MonoBehaviour:
   gridOffset: {x: 0.5, y: 0.5}
   baseGridPrefab: {fileID: 6483469728159607095, guid: ee3a4eb1905eeee49bf90785dcdcee54,
     type: 3}
-  defenceObjects: []
+  defenseObjects:
+  - {fileID: 11400000, guid: 76951ad73097fd741b6e92a337a8eee2, type: 2}
+  - {fileID: 11400000, guid: 3ac0ed6be8f7a3b4da67d28501990644, type: 2}
 --- !u!114 &249632490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +189,7 @@ MonoBehaviour:
   interactionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  gridManager: {fileID: 249632489}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
