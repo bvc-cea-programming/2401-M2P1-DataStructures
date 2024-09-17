@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 6483469728159607095, guid: ee3a4eb1905eeee49bf90785dcdcee54,
         type: 3}
       propertyPath: m_Name
-      value: Base Tile Variant
+      value: Terret
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

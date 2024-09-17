@@ -9,9 +9,5 @@ public class DefenseObjectSO : ScriptableObject
     public Sprite objectIcon;
     public int price;
 
-    private void Interact()
-    {
-
-    }
 
 }

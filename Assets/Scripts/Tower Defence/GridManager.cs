@@ -46,10 +46,10 @@ public class GridManager : MonoBehaviour
 
     public void SetGridObject(int x, int y)
     {
-        if(x<0|| y<0||x>=gridSize||y>=gridSize)
-        {
-            return;
-        }
+        if(x<0|| y<0||x >= gridSize||y >= gridSize) return;
+
+
+
         Destroy(_grid[x, y].gameObject);
         var RandomObj = defenseObjects[Random.Range(0,defenseObjects.Count)].objectPerfabs;
        
