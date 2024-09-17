@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,9 +9,12 @@ public class PracticeLists : MonoBehaviour
     private GameObject randomObject;
     private GameObject lastObject;
     [SerializeField] private Transform spawnLotion;
+    private List<GameObject> list;
+    private int positionOffset;
     private void Start()
     {
-      
+        positionOffset = 1;
+        list = new List<GameObject>();
     }
 
     private void Update()
@@ -19,29 +23,39 @@ public class PracticeLists : MonoBehaviour
         {
             GenerateRandomItem();
         }
+     
     }
 
     public void CollectObjects(GameObject obj)
     {
         obj.SetActive(false);
-        //list.Add(new GameObject(obj);
-        List<GameObject> list = new List<GameObject>();
-        list.Add(obj);
-        GameObject perfabs = list[Random.Range(0, list.Count)];
-        randomObject = perfabs;
-       
+        list.Add(obj);  
     }
     
     private void GenerateRandomItem()
     {
-       
         if (lastObject != null)
         {
-            Debug.Log("randomObject is" + lastObject);
+          
             lastObject.SetActive(false);
         }
-        GameObject clone =Instantiate(randomObject, spawnLotion.position, Quaternion.identity);
-        clone.SetActive(true);
-        lastObject = clone;
+
+        int index = Random.Range(0, list.Count);
+       
+        randomObject = list[index];
+        
+        if (randomObject.name == "Key Ring")
+        {
+            Debug.Log("offset");
+            randomObject.transform.position = new Vector3(spawnLotion.position.x, spawnLotion.position.y + positionOffset, spawnLotion.position.z);
+        }
+        else
+        {
+            randomObject.transform.position = spawnLotion.position;
+        }
+        randomObject.SetActive(true);
+        
+     
+        lastObject = randomObject;
     }
 }
