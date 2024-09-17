@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class PracticeArrays : MonoBehaviour
 {
-    private void Start()
-    {
-        
-    }
+    // Array to hold enemy prefabs
+    [SerializeField] private GameObject[] enemyPrefabs;
+
+    // Variable to keep track of the currently spawned enemy
+    private GameObject currentEnemy;
+
+    // Define a spawn point
+    [SerializeField] private Transform spawnPoint;
 
     private void Update()
     {
@@ -14,10 +18,19 @@ public class PracticeArrays : MonoBehaviour
             GenerateRandomEnemy();
         }
     }
-    
+
     private void GenerateRandomEnemy()
     {
-        
+        // If there's a current enemy, destroy it before spawning a new one
+        if (currentEnemy != null)
+        {
+            Destroy(currentEnemy);
+        }
+
+        // Randomly select an enemy from the array
+        int randomIndex = Random.Range(0, enemyPrefabs.Length);
+
+        // Instantiate the randomly selected enemy at the spawn point
+        currentEnemy = Instantiate(enemyPrefabs[randomIndex], spawnPoint.position, spawnPoint.rotation);
     }
-    
 }
