@@ -4,9 +4,10 @@ using UnityEngine;
 public class GridInteractor : MonoBehaviour
 {
     [SerializeField] private LayerMask interactionLayerMask;
-   
+    [SerializeField] 
     private Camera _mainCamera;
-
+    [SerializeField]
+    GridManager _gridManager;
     private void Start()
     {
         _mainCamera = Camera.main;
@@ -18,7 +19,9 @@ public class GridInteractor : MonoBehaviour
         {
             Vector2Int gridPosition = GetGridPosition(Input.mousePosition);
             Debug.Log(gridPosition);
-            
+            _gridManager.SetGridObject(gridPosition.x,gridPosition.y);
+          //  ;
+          //  gridPosition.y;
             // Add your code here. Use gridPosition to get the x and y value of the grid.
             
         }
