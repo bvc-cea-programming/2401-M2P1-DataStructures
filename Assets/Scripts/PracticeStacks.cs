@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PracticeStacks : MonoBehaviour
 {
+    Stack<GameObject> _collectibles = new Stack<GameObject>();
     private void Start()
     {
         
@@ -19,11 +20,16 @@ public class PracticeStacks : MonoBehaviour
 
     public void CollectObjects(GameObject obj)
     {
-        
+        _collectibles.Push(obj);
+        obj.SetActive(false);
     }
     
     private void GenerateObject()
     {
-        
+        if(_collectibles.Count > 0)
+        {
+            _collectibles.Peek().gameObject.SetActive(true);
+            _collectibles.Pop();
+        }
     }
 }
