@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 249632487}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9754099, y: 2.6461287, z: 4.1379128}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,9 +169,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 10
   gridOffset: {x: 0.5, y: 0.5}
-  baseGridPrefab: {fileID: 6483469728159607095, guid: ee3a4eb1905eeee49bf90785dcdcee54,
+  baseGridPrefab: {fileID: 7953378443364911606, guid: ee3a4eb1905eeee49bf90785dcdcee54,
     type: 3}
-  defenceObjects: []
+  gameBoard: {fileID: 1952658816}
+  defenseObjects:
+  - {fileID: 11400000, guid: 4c03ac228e4f7c24eb36c09b3630502a, type: 2}
+  - {fileID: 11400000, guid: 0c83f5c3eec1c0946b3c896a8c6cc451, type: 2}
+  - {fileID: 11400000, guid: 9b4762c89333f094392807c643f58ec1, type: 2}
+  - {fileID: 11400000, guid: 09d6527f044623848941bc91bd94e1d4, type: 2}
 --- !u!114 &249632490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +192,7 @@ MonoBehaviour:
   interactionLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  gridManager: {fileID: 249632489}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,6 +603,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1952658816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952658817}
+  m_Layer: 0
+  m_Name: GameBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952658817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952658816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -606,3 +643,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1072293080}
   - {fileID: 249632488}
+  - {fileID: 1952658817}
