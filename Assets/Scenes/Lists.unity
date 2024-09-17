@@ -339,6 +339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725f8bdca34d67240b091727770791a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectibleList: []
+  spawnPoint: {fileID: 1699580677}
+  collectiblePrefab: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0

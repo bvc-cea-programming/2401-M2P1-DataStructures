@@ -166,6 +166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc4f3a88bf30614d9d4def41f74ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkeletonPrefabs:
+  - {fileID: 641521888591489035, guid: 97c962e88eb3a214b90ada57ade9e175, type: 3}
+  - {fileID: 7189488435442882314, guid: 89b3295f78807444b82c525cc1d03ccb, type: 3}
+  - {fileID: 8275260647229087207, guid: dc8ed17d1c193f64d946480459f64031, type: 3}
+  - {fileID: 2554660004420269584, guid: 3c67de5d7b0302b4e9e089bc99fc55ed, type: 3}
+  spawnPoint: {fileID: 1699580677}
+  spawnSkeleton: {fileID: 1955515615}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +734,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1955515615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641521888591489035, guid: 97c962e88eb3a214b90ada57ade9e175,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504854779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
