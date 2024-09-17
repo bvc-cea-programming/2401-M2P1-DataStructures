@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PracticeQueues : MonoBehaviour
 {
+    Queue<GameObject> _collect = new Queue<GameObject>();
     private void Start()
     {
         
@@ -19,11 +20,16 @@ public class PracticeQueues : MonoBehaviour
 
     public void CollectObjects(GameObject obj)
     {
-        
+        _collect.Enqueue(obj);
+        obj.SetActive(false);
     }
     
     private void GenerateObject()
     {
-        
+        if (_collect.Count > 0)
+        {
+            _collect.Peek().gameObject.SetActive(true);
+            _collect.Dequeue();
+        }
     }
 }
