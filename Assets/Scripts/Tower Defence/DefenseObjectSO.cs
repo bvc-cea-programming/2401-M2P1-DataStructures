@@ -1,10 +1,17 @@
 using UnityEngine;
+[CreateAssetMenu(menuName ="DefenseObject",fileName ="New Defebse Ibhect")]
 
 public class DefenseObjectSO : ScriptableObject
 {
-    private string _name;
-    private string _description;
-    private float _price;
-    private GameObject perfabs;
-    
+    public string name;
+    public string description;
+    public GameObject objectPerfabs;
+    public Sprite objectIcon;
+    public int price;
+
+    private void Interact()
+    {
+
+    }
+
 }

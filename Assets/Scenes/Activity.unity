@@ -171,7 +171,9 @@ MonoBehaviour:
   gridOffset: {x: 0.5, y: 0.5}
   baseGridPrefab: {fileID: 6483469728159607095, guid: ee3a4eb1905eeee49bf90785dcdcee54,
     type: 3}
-  defenceObjects: []
+  defenseObjects:
+  - {fileID: 11400000, guid: e8c94f6873d619b42970568572ceb26c, type: 2}
+  - {fileID: 11400000, guid: 840602bba10ab2449aa76a8df37f46bc, type: 2}
 --- !u!114 &249632490
 MonoBehaviour:
   m_ObjectHideFlags: 0
