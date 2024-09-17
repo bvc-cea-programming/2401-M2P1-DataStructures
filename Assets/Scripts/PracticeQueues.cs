@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PracticeQueues : MonoBehaviour
 {
+    [SerializeField]
+    Queue<GameObject> collectibles = new Queue<GameObject>();
     private void Start()
     {
         
@@ -19,11 +21,16 @@ public class PracticeQueues : MonoBehaviour
 
     public void CollectObjects(GameObject obj)
     {
-        
+        collectibles.Enqueue(obj);
+        obj.SetActive(false);
     }
     
     private void GenerateObject()
     {
-        
+        if (collectibles.Count > 0)
+        {
+            collectibles.Peek().gameObject.SetActive(true);
+            collectibles.Dequeue();
+        }
     }
 }
