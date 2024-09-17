@@ -19,3 +19,4 @@ MonoBehaviour:
   objectPrefab: {fileID: 3387396382912904014, guid: e9508717e3dd58741b304fc3a13aea80,
     type: 3}
   objectSprite: {fileID: 0}
+  locationOffset: {x: 0, y: 0.2, z: 0}

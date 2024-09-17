@@ -9,4 +9,5 @@ public class DefenseObjectSO : ScriptableObject
     [SerializeField] public float fireRate;
     [SerializeField] public GridObject objectPrefab;
     [SerializeField] public Sprite objectSprite;
+    [SerializeField] public Vector3 locationOffset;
 }

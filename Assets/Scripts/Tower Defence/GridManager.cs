@@ -58,7 +58,7 @@ public class GridManager : MonoBehaviour
                 _gridObjects[x, y] = null;
             }
             _gridObjects[x, y] = Instantiate<GridObject>(defenseObjects[randomNum].objectPrefab, _grid[x, y].transform, false);
-            _gridObjects[x, y].transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            _gridObjects[x, y].transform.SetLocalPositionAndRotation(Vector3.zero + defenseObjects[randomNum].locationOffset, Quaternion.identity);
         }
 
     }
