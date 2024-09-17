@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415d6d59aac52ad44a55c28fa7d2e2a5, type: 3}
+  m_Name: Cannon
+  m_EditorClassIdentifier: 
+  objectName: Cannon
+  description: Shoots a big bullet in very slow reload speed
+  objectPrefab: {fileID: 43064571423677991, guid: 0c71d3243b5b0cc46881828ef8a5a960,
+    type: 3}
+  objectIcon: {fileID: 0}
+  price: 0
